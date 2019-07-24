@@ -1,0 +1,26 @@
+{{countriesList|json}}
+
+<br>
+
+<h1 style="color: seagreen">We will format the json into tabular format</h1>
+<hr>
+<style>
+  table, th, td {
+    border: 1px solid orange;
+    padding: 10px;
+  }
+</style>
+  <table>
+  <tr>
+    <th>Name</th>
+    <th>Capital</th>
+    <th>Currencies</th>
+    <th>Flag</th>
+  </tr>
+  <tr *ngFor="let c of countriesList">
+    <td>{{c.name}}</td>
+    <td>{{c.capital}}</td>
+    <td>{{c.currencies[0].code}}</td>
+    <td><img src="{{c.flag}}" style="width: 10%;height: 10%;"></td>
+  </tr>
+</table>
